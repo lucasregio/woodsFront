@@ -5,8 +5,6 @@ module.exports = {
     extend: {
       backgroundImage: {
         'woods': "url('/src/resources/images/woodsbg.jpg')",
-        'closet': "url('/src/resources/images/unnamed.jpg')",
-        'florest': "url('/src/resources/images/74728.jpg')", 
        }
     },
   },
