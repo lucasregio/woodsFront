@@ -6,7 +6,7 @@ interface IState {
     clientType?:"Client"|"Provider"
     email?:string
     password?:string
-};
+}
 export const LoginController = () => {
     const clientRepository = new LoginClientRepository();
     const providerRepository = new LoginProviderRepository();
