@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Modal from './components/Modal';
 import Chat from './pages/chat/Index';
+import Feed from './pages/feed/Index';
 import Home from './pages/home/Index';
 import Layouts from './pages/layouts/Index';
 import Login from './pages/login/Index';
@@ -16,8 +17,12 @@ function App() {
             <Modal/>
           </Route>
           <Route path = {'/singUp'}>
+              <Header/>
+              <SingUp/>
+          </Route>
+          <Route path = {'/marketplace'}>
             <Header/>
-            <SingUp/>
+            <Feed/>
           </Route>
           <Route path = {'/login'}>
             <Login/>
