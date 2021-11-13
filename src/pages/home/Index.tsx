@@ -4,7 +4,7 @@ import { HomeIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Fragment } from 'react';
 import moveis from "../../resources/images/moveis.jpeg";
 const navigation = [
-  { name: 'Product', href: '#' },
+  // { name: 'Product', href: '#' },
   // { name: 'Features', href: '#' },
   { name: 'Marketplace', href: '#' },
   // { name: 'Company', href: '#' },
@@ -52,7 +52,7 @@ export default function Home() {
                       {item.name}
                     </a>
                   ))}
-                  <a href="#" className="font-medium text-yellow-600 hover:text-yellow-500">
+                  <a href={"/Login"} className="font-medium text-yellow-600 hover:text-yellow-500">
                     Log in
                   </a>
                 </div>
@@ -100,7 +100,7 @@ export default function Home() {
                     ))}
                   </div>
                   <a
-                    href="#"
+                    href={"/Login"}
                     className="block w-full px-5 py-3 text-center font-medium text-yellow-600 bg-gray-50 hover:bg-gray-100"
                   >
                     Log in
@@ -121,20 +121,18 @@ export default function Home() {
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
-                  <a
-                    href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 md:py-4 md:text-lg md:px-10"
+                  <a href={"/singUp"} className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 md:py-4 md:text-lg md:px-10"
                   >
-                    Get started
+                    Sing Up
                   </a>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <a
+                  {/* <a
                     href="#"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-yellow-700 bg-yellow-100 hover:bg-yellow-200 md:py-4 md:text-lg md:px-10"
                   >
                     Live demo
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

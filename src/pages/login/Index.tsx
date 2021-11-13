@@ -4,7 +4,7 @@ import { LoginController } from "./LoginController";
 export default function Login() {
     const {login, handleRadionButtonState, state, handlePasswordInputState, handleEmailInputState} = LoginController();
     return(
-        <div className={'container grid place-content-center min-w-full bg-cover bg-center bg-woods   h-screen'}>
+        <div className={'container grid place-content-center min-w-full bg-cover bg-center bg-woods h-screen'}>
             <div className={'flex flex-col shadow-xl p-4 bg-gray-400 border border-black rounded-2xl w-96'}>
                 <label className='text-center font-black'>E-mail</label>
                 <input onChange={(e)=> handleEmailInputState(e.target.value)} type="text" className='rounded-2xl'/>
