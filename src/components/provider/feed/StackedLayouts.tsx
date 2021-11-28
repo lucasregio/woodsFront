@@ -2,17 +2,19 @@
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Fragment } from 'react'
-import Feed from '../../pages/feed/Index'
+import Tables from './Tables'
 
 const user = {
   name: 'Tom Cook',
   email: 'tom@example.com',
   imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
 }
 const navigation = [
-  { name: 'Woods', href: '#', current: true },
-  { name: 'Usuário', href: '#', current: false },
+  { name: 'Woods', href: '/providerfeed', current: true },
+  { name: 'Provedor', href: '/providerfeed', current: false },
+  { name: 'Serviços', href: '/listservice', current: false },
+  { name: 'Novo Serviço', href: '/newservice', current: false },
 ]
 const userNavigation = [
   { name: 'Perfil', href: '#' },
@@ -24,17 +26,9 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Layouts() {
+export default function StackedLayouts() {
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-gray-800">
           {({ open }) => (
@@ -42,13 +36,6 @@ export default function Layouts() {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                   <div className="flex items-center">
-                    <div className="flex-shrink-0">
-                      {/* <img
-                        className="h-8 w-8"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                        alt="Workflow"
-                      /> */}
-                    </div>
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
                         {navigation.map((item) => (
@@ -71,13 +58,11 @@ export default function Layouts() {
                   </div>
                   <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
-                      
-                      <label
+                    <label
                         className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                       >
-                        <span>Jorge</span>
+                        <span>Lucas</span>
                       </label>
-
                       <button
                         type="button"
                         className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
@@ -192,12 +177,12 @@ export default function Layouts() {
 
         <header className="bg-white shadow">
           <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold text-gray-900">Serviços</h1>
+            <h1 className="text-3xl font-bold text-gray-900">Orçamentos</h1>
           </div>
         </header>
         <main>
           <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-            <Feed/>
+            <Tables></Tables>
           </div>
         </main>
       </div>

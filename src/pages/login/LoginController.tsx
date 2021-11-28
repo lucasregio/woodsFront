@@ -3,7 +3,7 @@ import { useCallback, useState } from "react";
 import { LoginClientRepository } from "../../repositories/LoginClientRepository";
 import { LoginProviderRepository } from "../../repositories/LoginProviderRepository";
 interface IState {
-    clientType?:"Client"|"Provider"
+    clientType?:"Cliente"|"Provedor"
     email?:string
     password?:string
 }
@@ -28,8 +28,8 @@ export const LoginController = () => {
         try {
             let response: AxiosResponse;
             console.log(state?.clientType);
-            if(state?.clientType === "Client"){
-                response = await clientRepository.create(state?.email!, state?.password!);
+            if(state?.clientType === "Cliente"){
+                response = await clientRepository.login(state?.email!, state?.password!);
                 console.log(response);
                 return response;
             }else{

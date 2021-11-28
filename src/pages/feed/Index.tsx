@@ -2,35 +2,35 @@ import { RatingView } from "react-simple-star-rating"
 /* This example requires Tailwind CSS v2.0+ */
 const people = [
     {
-      name: 'Jane Cooper',
-      service: 'Regional Paradigm Technician',
-      department: 'Optimization',
+      name: 'Ana Paula',
+      service: 'Cozinha, Sala de Estar',
+      department: 'Madeira',
       rating: 5,
       address: 'Avenida Comissário José Dantas de Melo',
       image:
         'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
     },
     {
-    name: 'Cody Fisher',
-    service: 'Regional Paradigm Technician',
-    department: 'Optimization',
+    name: 'Lucas',
+    service: 'Escritórios, Sala de Estar, Quartos',
+    department: 'Madeira, MDF',
     rating: 4,
-    address: 'Avenida Comissário José Dantas de Melo',
+    address: 'Avenida Carlos Lindemberg',
     image:
         'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
     },
     {
-    name: 'Esther Howard',
-    service: 'Regional Paradigm Technician',
-    department: 'Optimization',
+    name: 'Rosely Pereira',
+    service: 'Mesas e Cadeiras',
+    department: 'Móveis Rústicos',
     rating: 3,
-    address: 'Avenida Comissário José Dantas de Melo',
+    address: 'Avenida Salgado Filho',
     image:
         'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60',
     },
 ]
   
-export default function Example() {
+export default function feed() {
 return (
     <div className="flex flex-col p-4 mt-4 ml-4 mr-4 mb-4">
     <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -43,13 +43,13 @@ return (
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                 >
-                    Name
+                    Provedores
                 </th>
                 <th
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                 >
-                    Title
+                    Descrição
                 </th>
                 <th
                     scope="col"
@@ -87,14 +87,17 @@ return (
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                     <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                        Active
+                        Ativo
                     </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"><RatingView ratingValue={person.rating}/></td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                    <a onClick = {() => chat()} className="text-indigo-600 hover:text-indigo-900">
+                    <a href={'/chatclient'} className="text-yellow-600 hover:text-yellow-900">
                         Chat
                     </a>
+                    {/* <a onClick = {() => chat()} className="text-yellow-600 hover:text-yellow-900">
+                        Chat
+                    </a> */}
                     </td>
                 </tr>
                 ))}

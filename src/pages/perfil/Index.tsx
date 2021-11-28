@@ -8,7 +8,7 @@ export default function Perfil() {
             </div>
             <div className="lg:flex ml-20 flex flex-col ">    
                 
-                <label className='font-medium' >Name</label>
+                <label className='font-medium' >Nome</label>
                 <input type="text" className="p-2 my-2 w-80 rounded-2xl"/>
 
                 <label className='font-medium'>E-mail</label>
@@ -17,12 +17,12 @@ export default function Perfil() {
                 <label className='font-medium'>CPF/CNPJ</label>
                 <input type="text" className='p-2 my-2 w-80 rounded-2xl'/>
 
-                <label className='font-medium'>Phone</label>
+                <label className='font-medium'>Telefone</label>
                 <input type="text"className='p-2 my-2 w-80 rounded-2xl'/>
                 <div className=" lg:items-center ml-5 flex flex-col ">
                     <button 
                         className=' bg-green-500 p-2 my-2 w-40 active:bg-gray-500 rounded-2xl'
-                    >Save</button>
+                    >Salvar</button>
                 </div>
                 
             </div>

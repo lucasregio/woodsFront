@@ -2,7 +2,7 @@
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Fragment } from 'react'
-import Feed from '../../pages/feed/Index'
+import Chat from '../chat/Index'
 
 const user = {
   name: 'Tom Cook',
@@ -11,8 +11,8 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
 const navigation = [
-  { name: 'Woods', href: '#', current: true },
-  { name: 'Usuário', href: '#', current: false },
+  { name: 'Woods', href: '/perfil', current: true },
+  { name: 'Usuário', href: '/perfil', current: false },
 ]
 const userNavigation = [
   { name: 'Perfil', href: '#' },
@@ -191,13 +191,10 @@ export default function Layouts() {
         </Disclosure>
 
         <header className="bg-white shadow">
-          <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold text-gray-900">Serviços</h1>
-          </div>
         </header>
         <main>
           <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-            <Feed/>
+            <Chat/>
           </div>
         </main>
       </div>

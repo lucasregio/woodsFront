@@ -6,7 +6,7 @@ export class LoginClientRepository extends AbstractRepository{
 
     private readonly endpoint: string = '/clients/login';
     
-    async create(email:string, password:string){
+    async login(email:string, password:string){
         let response: AxiosResponse;
 
         try {
